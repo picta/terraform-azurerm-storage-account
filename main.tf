@@ -18,9 +18,3 @@ resource "azurerm_storage_account" "storage_account" {
     virtual_network_subnet_ids = ["${var.virtual_network_subnet_ids}"]
   }
 }
-
-
-tags = {
-  environment = "dev"
-  version = "v0.01"
-  }
