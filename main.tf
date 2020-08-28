@@ -22,5 +22,5 @@ resource "azurerm_storage_account" "storage_account" {
 
 tags = {
   environment = "dev"
-  version = ".001"
+  version = "v0.01"
   }
