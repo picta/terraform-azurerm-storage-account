@@ -4,6 +4,7 @@ terraform {
 
 provider "azurerm" {
   version = "=2.20.0"
+  features {}
 }
 
 resource "azurerm_storage_account" "storage_account" {
