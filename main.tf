@@ -13,4 +13,4 @@ resource "azurerm_storage_account" "storage_account" {
   account_tier             = "${var.storage_account_tier}"
   resource_group_name      = "${var.resource_group_name}"
   account_replication_type = "${var.storage_account_replication_type}"
-  
+}
