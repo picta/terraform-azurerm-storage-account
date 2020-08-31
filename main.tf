@@ -13,14 +13,4 @@ resource "azurerm_storage_account" "storage_account" {
   account_tier             = "${var.storage_account_tier}"
   resource_group_name      = "${var.resource_group_name}"
   account_replication_type = "${var.storage_account_replication_type}"
-
-  dynamic "network_rules" {
-    for_each = var.network_rules != null ? ["true"] : []
-    content {
-      default_action             = "Deny"
-      ip_rules                   = var.network_rules.ip_rules
-      virtual_network_subnet_ids = var.network_rules.subnet_ids
-      bypass                     = var.network_rules.bypass
-    }
-  }
-}
+  
